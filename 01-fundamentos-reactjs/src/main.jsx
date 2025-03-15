@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+import { App } from "./App.jsx";
 
 // Createroot recebe o parametro que é o id do elemento para saber qual é o elemento raiz da página onde este caso é a rota até a div que vamos estilizar ou criar
 createRoot(document.getElementById("root")).render(
