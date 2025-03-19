@@ -1,12 +1,22 @@
 body:not([class]) {
   /* Seus estilos aqui */
-  background-color: rgb(143, 183, 202);
+  background-color: rgb(110, 110, 139);
+  margin: 0;
 }
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+.componentePost p {
+  font-size: 30px;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
 }
 
 .logo {
