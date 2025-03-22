@@ -43,6 +43,7 @@
   height: 50px;
   background: transparent;
   color: var(--green-500);
+  font-family: "Roboto", sans-serif;
   border: 1px solid var(--green-500);
   border-radius: 8px;
   padding: 0 1.5rem;
@@ -66,13 +67,16 @@
 
 .profile strong {
   margin-top: 1rem;
-  color: var(--gray-100);
   line-height: 1.6;
   gap: 10px;
+  font-family: "Roboto", sans-serif;
+  color: var(--zinc-100);
 }
 
 .profile span {
-  color: var(--gray-400);
+  /*  color: var(--gray-400);*/
   line-height: 1.6;
   font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--zinc-400);
 }

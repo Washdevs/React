@@ -2,7 +2,7 @@
   background: var(--gray-800);
   border-radius: 8px;
   overflow: hidden;
-  color: var(--white);
+  color: var(--zinc-100);
   padding: 2.5rem;
 }
 
@@ -11,17 +11,20 @@
   background: var(--gray-800);
   border-radius: 8px;
   overflow: hidden;
-  color: var(--white);
+  color: var(--zinc-100);
   padding: 2.5rem;
   margin-top: 2rem;
 }
 
 .content {
   text-decoration: none;
-  color: var(--gray-350);
+  color: var(--zinc-200);
+  font-family: "Roboto", sans-serif;
 }
+
 .content p {
   margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .content a {
@@ -29,6 +32,7 @@
   color: var(--green-500);
   text-decoration: none;
   transition: color 0.2s, background-color 0.2s;
+  font-family: "Roboto", sans-serif;
 }
 
 .content a:hover {
@@ -58,6 +62,7 @@
 
 .footer p {
   padding: 1rem 0rem 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .footer input {
@@ -67,6 +72,7 @@
   height: 4rem;
   background: var(--gray-900);
   color: var(--white);
+  font-family: "Roboto", sans-serif;
 }
 
 .footer button {
@@ -76,6 +82,7 @@
   padding: 0.875rem 0.875rem 0.875rem; /*cima, laterais, baixo*/
   background: var(--green-500);
   color: var(--white);
+  font-family: "Roboto", sans-serif;
 
   transition: color 0.2s, background-color 0.2s;
 }
@@ -92,19 +99,22 @@
 }
 
 .data {
-  color: var(--gray-400);
+  color: var(--zinc-400);
+  font-family: "Roboto", sans-serif;
 }
 
 .authorInfo {
   display: flex;
   flex-direction: column;
   padding: 0rem 0.875rem 0rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .authorInfo span {
-  color: var(--gray-400);
+  color: var(--zinc-400);
   line-height: 1.6;
   font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .author {
