@@ -3,17 +3,18 @@ import styles from "./Post.module.css";
 export function Post() {
   return (
     <article className={styles.post}>
-      <header className={styles.header}>
+      <header className={styles.head}>
         <div className={styles.author}>
           <img
             className={styles.avatar}
-            src="https://images.unsplash.com/photo-1542033474370-d28774f3338d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxNzE4ODAyfHxlbnwwfHx8fHw%3D"
+            src="https://github.com/Cannyster.png"
           />
           <div className={styles.authorInfo}>
-            <strong>Diego Fernandes</strong>
+            <strong>Jhonanthan</strong>
             <span>Web Developer</span>
           </div>
         </div>
+
         <time
           title="20 de março"
           datetime="2025-03-20 22:25"
@@ -22,6 +23,7 @@ export function Post() {
           Publicado há 1h
         </time>
       </header>
+
       <div className={styles.content}>
         <p>Fala galeraa 👋</p>
         <p>
@@ -29,10 +31,13 @@ export function Post() {
           no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
         </p>
         <p>
-          👉 <a href="">jane.design/doctorcare</a>
+          👉 {""}
+          <a href="#">jane.design/doctorcare</a>
         </p>
         <p>
-          <a href=""> #novoprojeto #nlw #rocketseat</a>
+          <a href="#"> #novoprojeto</a> {""}
+          <a href="#"> #nlw</a>
+          {""} <a href="#"> #rocketseat</a>
         </p>
       </div>
       <footer className={styles.footer}>
