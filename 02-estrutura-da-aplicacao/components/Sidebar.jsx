@@ -2,6 +2,9 @@ import styles from "./Sidebar.module.css";
 import { PencilLine } from "@phosphor-icons/react";
 
 export function Sidebar() {
+  function handleClick() {
+    console.log("Este perfil não pode ser editado ainda");
+  }
   return (
     <aside className={styles.sidebar}>
       <img
@@ -14,11 +17,11 @@ export function Sidebar() {
           className={styles.avatar}
           src="https://avatars.githubusercontent.com/u/173907934?v=4"
         />
-        <strong>Jhonanthan</strong>
+        <strong>Washington</strong>
         <span>Web Developer</span>
       </div>
       <footer className={styles.footer}>
-        <a href="#">
+        <a href="#" onClick={handleClick}>
           <PencilLine size={20} />
           Editar seu perfil
         </a>

@@ -20,7 +20,7 @@
 
 .avatar {
   box-sizing: initial;
-  border: 2px solid var(--gray-900);
+  border: 2px solid var(--zinc-950);
   width: 3rem;
   height: 3rem;
   object-fit: cover; /*Para não destorcer a imagem*/
@@ -43,40 +43,32 @@
   height: 50px;
   background: transparent;
   color: var(--green-500);
-  font-family: "Roboto", sans-serif;
   border: 1px solid var(--green-500);
   border-radius: 8px;
   padding: 0 1.5rem;
   font-weight: bold;
   text-decoration: none;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 0.55rem;
-
   transition: color 0.2s, background-color 0.2s; /*Animação do transition*/
 }
 
 .sidebar footer a:hover {
-  /* Hover para adicionar a mudança de cor*/
   background: var(--green-500);
-  color: var(--white);
+  color: var(--zinc-100);
 }
 
 .profile strong {
   margin-top: 1rem;
   line-height: 1.6;
   gap: 10px;
-  font-family: "Roboto", sans-serif;
   color: var(--zinc-100);
 }
 
 .profile span {
-  /*  color: var(--gray-400);*/
   line-height: 1.6;
   font-size: 0.875rem;
-  font-family: "Roboto", sans-serif;
   color: var(--zinc-400);
 }
