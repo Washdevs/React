@@ -21,8 +21,8 @@
 .avatar {
   box-sizing: initial;
   border: 2px solid var(--zinc-950);
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   object-fit: cover; /*Para não destorcer a imagem*/
   display: flex;
   align-items: center;

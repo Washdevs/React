@@ -1,27 +1,21 @@
+import { Avatar } from "./Avatar";
 import styles from "./Sidebar.module.css";
 import { PencilLine } from "@phosphor-icons/react";
 
 export function Sidebar() {
-  function handleClick() {
-    console.log("Este perfil não pode ser editado ainda");
-  }
   return (
     <aside className={styles.sidebar}>
       <img
         className={styles.cover}
         src="https://images.unsplash.com/photo-1605379399642-870262d3d051?q=50&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-
       <div className={styles.profile}>
-        <img
-          className={styles.avatar}
-          src="https://avatars.githubusercontent.com/u/173907934?v=4"
-        />
+        <Avatar src='https://github.com/WashDevs.png' />
         <strong>Washington</strong>
         <span>Web Developer</span>
       </div>
       <footer className={styles.footer}>
-        <a href="#" onClick={handleClick}>
+        <a href="#">
           <PencilLine size={20} />
           Editar seu perfil
         </a>
