@@ -1,23 +1,21 @@
 import styles from "./Post.module.css";
+import { Coment } from "./Coment";
+import { Avatar } from "./Avatar";
 
 export function Post() {
   return (
     <article className={styles.post}>
       <header className={styles.head}>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src="https://github.com/Cannyster.png"
-          />
+          <Avatar src='https://github.com/cannyster.png' />
           <div className={styles.authorInfo}>
             <strong>Jhonanthan</strong>
             <span>Web Developer</span>
           </div>
         </div>
-
         <time
           title="20 de março"
-          datetime="2025-03-20 22:25"
+          dateTime="2025-03-20 22:25"
           className={styles.data}
         >
           Publicado há 1h
@@ -40,11 +38,17 @@ export function Post() {
           <a href="#"> #rocketseat</a>
         </p>
       </div>
-      <footer className={styles.footer}>
-        <p>Deixe seu Feedback</p>
-        <input type="text" />
-        <button>Publicar</button>
-      </footer>
+      <form className={styles.commentForm}>
+        <strong>Deixe seu Feedback</strong>
+        <textarea placeholder="Deixe seu Feedback aqui" />
+        <footer><button type="submit">Comentar</button></footer>
+      </form>
+
+      <div className={styles.commentList}>
+        <Coment />
+        <Coment />
+        <Coment />
+      </div>
     </article>
   );
 }

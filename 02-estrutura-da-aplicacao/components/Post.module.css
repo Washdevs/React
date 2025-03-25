@@ -19,12 +19,10 @@
 .content {
   text-decoration: none;
   color: var(--zinc-200);
-  font-family: "Roboto", sans-serif;
 }
 
 .content p {
   margin-top: 1rem;
-  font-family: "Roboto", sans-serif;
 }
 
 .content a {
@@ -32,7 +30,6 @@
   color: var(--green-500);
   text-decoration: none;
   transition: color 0.2s, background-color 0.2s;
-  font-family: "Roboto", sans-serif;
 }
 
 .content a:hover {
@@ -41,9 +38,9 @@
 
 .avatar {
   box-sizing: initial;
-  border: 2px solid var(--gray-900);
-  width: 3rem;
-  height: 3rem;
+  border: 2px solid var(--zinc-950);
+  width: 4rem;
+  height: 4rem;
   object-fit: cover; /*Para não destorcer a imagem*/
   display: flex;
   align-items: center;
@@ -53,41 +50,50 @@
   outline: 2px solid var(--green-500);
 }
 
-.footer {
+.commentForm {
   border-top: 1px solid var(--gray-600);
   margin-top: 1.5rem;
-  padding: 0rem 0rem 0rem;
+  padding: 1rem 0rem 0rem;
   justify-content: start;
 }
-
-.footer p {
-  padding: 1rem 0rem 1rem;
-  font-family: "Roboto", sans-serif;
+.commentForm > strong{
+  display: block;
+  padding-bottom: 1rem;
 }
-
-.footer input {
+.commentForm textarea {
   border: 2px solid var(--green-500);
   border-radius: 8px;
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   background: var(--gray-900);
-  color: var(--white);
-  font-family: "Roboto", sans-serif;
+  color: var(--zinc-200);
+  padding: 0.875rem 0.875rem 0rem;
+  resize: none;
 }
 
-.footer button {
+.commentForm footer{
+  visibility: hidden;
+  max-height: 0;
+}
+
+
+.commentForm:focus-within footer{
+  visibility: visible;
+  max-height: none;
+}
+
+
+.commentForm button[type=submit] {
   border: 2px solid var(--green-500);
   border-radius: 8px;
   margin: 1rem 0rem 0rem; /*cima, laterais, baixo*/
   padding: 0.875rem 0.875rem 0.875rem; /*cima, laterais, baixo*/
   background: var(--green-500);
   color: var(--white);
-  font-family: "Roboto", sans-serif;
-
   transition: color 0.2s, background-color 0.2s;
 }
 
-.footer button:hover {
+.commentForm button[type=submit]:hover {
   background: var(--green-600);
   color: var(--white);
 }
@@ -100,25 +106,26 @@
 
 .data {
   color: var(--zinc-400);
-  font-family: "Roboto", sans-serif;
 }
 
 .authorInfo {
   display: flex;
   flex-direction: column;
   padding: 0rem 0.875rem 0rem;
-  font-family: "Roboto", sans-serif;
 }
 
 .authorInfo span {
   color: var(--zinc-400);
   line-height: 1.6;
   font-size: 0.875rem;
-  font-family: "Roboto", sans-serif;
 }
 
 .author {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.commentList {
+  margin-top: 2rem;
 }
