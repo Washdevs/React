@@ -13,6 +13,11 @@
   --zinc-900: oklch(0.21 0.006 285.885);
   --zinc-950: oklch(0.141 0.005 285.823);
 
+  --red-500: oklch(0.637 0.237 25.331);
+  --red-600: oklch(0.577 0.245 27.325);
+  --red-700: oklch(0.505 0.213 27.518);
+  --red-800: oklch(0.444 0.177 26.899);
+
   --gray-100: #e1e1e6;
   --gray-300: #c4c4cc;
   --gray-400: #8d8d99;
@@ -35,6 +40,11 @@ body {
   background: var(--zinc-950);
   color: var(--gray-300);
   -webkit-font-smoothing: antialiased; /*Para deixar as fontes como antialiasing, isto para deixar bonito fontes que não são do sistema padrão*/
+}
+
+:focus {
+  resize: none;
+  outline: none;
 }
 
 body,
