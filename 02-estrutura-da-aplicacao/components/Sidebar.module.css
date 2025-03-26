@@ -18,20 +18,6 @@
   margin-top: -2rem;
 }
 
-.avatar {
-  box-sizing: initial;
-  border: 2px solid var(--zinc-950);
-  width: 4rem;
-  height: 4rem;
-  object-fit: cover; /*Para não destorcer a imagem*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  border-radius: 8px;
-  outline: 2px solid var(--green-500);
-}
-
 .sidebar footer {
   border-top: 1px solid var(--gray-600);
   margin-top: 1.5rem;
