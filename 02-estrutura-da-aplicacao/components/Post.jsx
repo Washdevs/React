@@ -17,7 +17,7 @@ export function Post({ author, publishedAt, content }) {
   addSuffix: true,
  });
 
- const [comments, setComments] = useState(['Top']);
+ const [comments, setComments] = useState([]);
  // Temos um array de comentários que começa com o valor inicial "Top".
 
  const [newCommentText, setNewCommentText] = useState('');
@@ -43,6 +43,15 @@ export function Post({ author, publishedAt, content }) {
   // Limpa o campo de input após adicionar o comentário.
  }
 
+ function deleteComment(commentToDelete) {
+  const listaDeComentariosSemODeletado = comments.filter(comment => {
+   return comment !== commentToDelete;
+  });
+  // ao executar ela recebe comment como conteúdo que deve ser excluído
+  setComments(listaDeComentariosSemODeletado);
+  console.log('passei no post');
+ }
+
  return (
   <article className={styles.post}>
    <header className={styles.head}>
@@ -53,7 +62,11 @@ export function Post({ author, publishedAt, content }) {
       <span>{author.role}</span>
      </div>
     </div>
-    <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()} className={styles.data}>
+    <time
+     title={publishedDateFormatted}
+     dateTime={publishedAt.toISOString()}
+     className={styles.data}
+    >
      {publishedDateRelativeNow}
     </time>
    </header>
@@ -77,7 +90,12 @@ export function Post({ author, publishedAt, content }) {
    <form onSubmit={handlleCreateNewComment} className={styles.commentForm}>
     <strong>Deixe seu Feedback</strong>
 
-    <textarea name="textArea" placeholder="Deixe seu Feedback aqui" value={newCommentText} onChange={handlleCreateNewCommentChange} />
+    <textarea
+     name="textArea"
+     placeholder="Deixe seu Feedback aqui"
+     value={newCommentText}
+     onChange={handlleCreateNewCommentChange}
+    />
 
     <footer>
      <button type="submit">Comentar</button>
@@ -86,7 +104,7 @@ export function Post({ author, publishedAt, content }) {
 
    <div className={styles.commentList}>
     {comments.map(comment => {
-     return <Coment key={comment} content={comment} />;
+     return <Coment key={comment} content={comment} onDeleteComment={deleteComment} />; //envia a função para ser executada pelo comment
     })}
    </div>
   </article>
