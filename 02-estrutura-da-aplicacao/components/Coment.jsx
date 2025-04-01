@@ -2,7 +2,14 @@ import styles from './Coment.module.css';
 import { ThumbsUp, Trash } from '@phosphor-icons/react';
 import { Avatar } from './Avatar';
 
-export function Coment({ content }) {
+export function Coment({ content, onDeleteComment }) {
+ // onDeleteComment, prop recebida de Post
+ //
+ function handleDeleteComment() {
+  // 2 - a função recebo o conteúdo e passa para a função deleteComment, que deleta o Conteúdo
+  onDeleteComment(content);
+ }
+
  return (
   <div className={styles.comment}>
    <Avatar hasBorder={false} src="https://github.com/deyvin.png" />
@@ -17,8 +24,9 @@ export function Coment({ content }) {
        </time>{' '}
       </div>
 
-      <button title="Deletar">
-       <Trash size={22} />
+      <button onClick={handleDeleteComment} title="Deletar comentário">
+       {' '}
+       {/* 1 -  - Ao clicar executa a função */} <Trash size={22} />
       </button>
      </header>
 
