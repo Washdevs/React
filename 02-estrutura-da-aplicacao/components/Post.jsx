@@ -24,6 +24,7 @@ export function Post({ author, publishedAt, content }) {
  // O texto do novo comentário começa como uma string vazia.
 
  function handlleCreateNewCommentChange(event) {
+  event.target.setCustomValidity(''); // Para que a mensagem seja vazia e não volte a apercer quando digitar algo
   setNewCommentText(event.target.value);
 
   // Pega o valor digitado no input e atualiza o estado com ele.
@@ -51,6 +52,12 @@ export function Post({ author, publishedAt, content }) {
   setComments(listaDeComentariosSemODeletado);
   console.log('passei no post');
  }
+
+ function handleNewCommentInvalid(event) {
+  event.target.setCustomValidity('Preencha o campo obrigatório'); //No elemento acontecendo o evento chamado a função que mostra esta string ao usuário ao realizar o evento
+ }
+
+ const NovoComentarioVazio = newCommentText.length === 0;
 
  return (
   <article className={styles.post}>
@@ -86,6 +93,7 @@ export function Post({ author, publishedAt, content }) {
       return <p>Erro ao retornar Valores</p>;
      }
     })}
+    W
    </div>
    <form onSubmit={handlleCreateNewComment} className={styles.commentForm}>
     <strong>Deixe seu Feedback</strong>
@@ -95,10 +103,16 @@ export function Post({ author, publishedAt, content }) {
      placeholder="Deixe seu Feedback aqui"
      value={newCommentText}
      onChange={handlleCreateNewCommentChange}
+     onInvalid={handleNewCommentInvalid}
+     required // por padrão é true então para ser false por padrão deve ter ={false} Não vai permitir enviar o formulário sem valor
     />
 
     <footer>
-     <button type="submit">Comentar</button>
+     <button type="submit" disabled={NovoComentarioVazio}>
+      {' '}
+      {/* Boa pratica para manutanção*/}{' '}
+      {/* bOTÃO FICA DESABILITADO SE NÃO TIVER VALOR NA VARIÁVEL DAQUI*/} Comentar
+     </button>
     </footer>
    </form>
 
