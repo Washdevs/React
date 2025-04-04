@@ -1,0 +1,22 @@
+.wrapper {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 256px 1fr; /*grid para algo ter tamanho flexivel*/ /*Grid com duas colunas uma de 256px e outra de 1fr*/
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media(max-width: 768px){
+
+  html{
+    font-size: 85%;
+    line-height: 1.3;
+  }
+
+.wrapper{
+  grid-template-columns: 1fr /*Nesta medida todo na grid estará em uma coluna apenas de medida 1fr*/
+  }
+}
