@@ -93,7 +93,6 @@ export function Post({ author, publishedAt, content }) {
       return <p>Erro ao retornar Valores</p>;
      }
     })}
-    W
    </div>
    <form onSubmit={handlleCreateNewComment} className={styles.commentForm}>
     <strong>Deixe seu Feedback</strong>
@@ -111,7 +110,7 @@ export function Post({ author, publishedAt, content }) {
      <button type="submit" disabled={NovoComentarioVazio}>
       {' '}
       {/* Boa pratica para manutanção*/}{' '}
-      {/* bOTÃO FICA DESABILITADO SE NÃO TIVER VALOR NA VARIÁVEL DAQUI*/} Comentar
+      {/* Botão fica desabilitado se não tiver valor na variável NovoComentarioVazio*/} Comentar
      </button>
     </footer>
    </form>
